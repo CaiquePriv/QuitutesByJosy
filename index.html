@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quitutes By Josy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #fff5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #ff6b8b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ffecef;
+        }
+        
+        .banner {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .banner-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #ff4d73;
+        }
+        
+        .produtos {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #ff6b8b;
+        }
+        
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .produto-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .produto-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .produto-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .produto-info {
+            padding: 20px;
+        }
+        
+        .produto-info h3 {
+            margin-bottom: 10px;
+            color: #ff6b8b;
+        }
+        
+        .produto-info p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .preco {
+            font-weight: bold;
+            color: #ff6b8b;
+            font-size: 1.2rem;
+        }
+        
+        .sobre {
+            background-color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .sobre-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sobre-content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background-color: #ff6b8b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .banner {
+                height: 300px;
+            }
+            
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Quitutes By Josy</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>Doces que encantam o paladar</h1>
+            <p>Feitos com amor e ingredientes de qualidade, nossos doces artesanais encantam em cada mordida.</p>
+            <a href="cardapio.html" class="btn">Conheça nossos produtos</a>
+        </div>
+    </section>
+    
+    <section id="produtos" class="produtos">
+        <h2 class="section-title">Nossas Delícias</h2>
+        <div class="produtos-grid">
+            <div class="produto-card">
+                <img src="imagens/BoloChocolate.jpg" alt="Bolo de Chocolate" class="produto-img">
+                <div class="produto-info">
+                    <h3>Massa amanteigada de Chocolate</h3>
+                    <p>Feito com massa amanteigada e muito chocolate, esse bolo é a pedida certa pra quem ama um sabor marcante.</p>
+                </div>
+            </div>
+            
+            <div class="produto-card">
+                <img src="imagens/BoloBaunilha.jpg" alt="Cupcake" class="produto-img">
+                <div class="produto-info">
+                    <h3>Massa Amanteigada de Baunilha</h3>
+                    <p>Nosso bolo de massa amanteigada com baunilha é leve, saboroso e feito pra derreter na boca.</p>
+                </div>
+            </div>
+            
+            <div class="produto-card">
+                <img src="imagens/Docinhos.jpg" alt="Cookies" class="produto-img">
+                <div class="produto-info">
+                    <h3>Docinhos</h3>
+                    <p>Vai fazer festa? Nossos doces caseiros são a escolha perfeita para encantar seus convidados.</p>
+                </div>
+            </div>
+            
+            <div class="produto-card">
+                <img src="imagens/Sobremesas.jpg" alt="Torta de Morango" class="produto-img">
+                <div class="produto-info">
+                    <h3>Sobremesas</h3>
+                    <p>Domingo com sabor especial? Nossas tortas, manjar e flan estão prontos para a sua mesa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="sobre" class="sobre">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="sobre-content">
+            <p>A "Quitutes By Josy" nasceu há mais de 10 anos, dentro de casa, com uma simples paixão: fazer doces com amor. Desde então, cada brigadeiro enrolado, cada bolo confeitado e cada receita testada carrega o toque único da Josy — uma confeiteira dedicada que transforma ingredientes simples em momentos inesquecíveis.</p>
+           <p>Com carinho, cuidado e aquele “tempero de mãe”, a Quitutes By Josy oferece doces artesanais feitos como antigamente: na panela, com calma, e com muito amor. Aqui, cada encomenda é tratada como especial, pensada para adoçar comemorações, presentear pessoas queridas ou simplesmente deixar o seu dia mais doce.</p>
+            <p>Seja bem-vindo(a) ao nosso cantinho de sabor e afeto. Experimente os quitutes e sinta o gosto da confeitaria feita com alma!</p>
+        </div>
+    </section>
+    
+    <footer id="contato">
+        <div class="footer-content">
+            <h3>Quitutes By Josy</h3>
+            <p>Rua Mamoré,20 casa 1 - Vila Alto de Santo André</p>
+            <p>Telefone: (11) 98974-9657</p>
+            <p>instagram: @quitutesbyjosy</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/quitutesbyjosy?igsh=OGpvdTR3MWtmMHZ3" target="_blank">
+                    <img src="imagens/ImgInstagram.png" alt="Instagram" style="width: 32px; height: 32px;">
+                </a>
+                <a href="https://wa.me/5511989749657?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%21" target="_blank">
+                    <img src="imagens/ImgWhats.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+                </a>
+            </div>
+            
+            <p>&copy; 2025 Quitutes By Josy. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

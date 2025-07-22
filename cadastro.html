@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro | Quitutes By Josy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    /* Cabeçalho com nome e menu */
+    .cabecalho-site {
+      background-color: #ff6b8b;
+      color: white;
+    }
+
+    .topo-site {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .topo-site h1 {
+      margin: 0;
+      font-size: 2.3rem;
+    }
+
+    .menu-site {
+      background-color: #ff8cab;
+      padding: 10px 0;
+    }
+
+    .menu-site ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-site a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .menu-site a:hover {
+      color: #222;
+    }
+
+    /* Cabeçalho da seção de cadastro */
+    .header-cadastro {
+      background-color: #ff6b8b;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header-cadastro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .header-cadastro p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Formulário */
+    .cadastro {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .form-cadastro {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #ff6b8b;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .btn-enviar {
+      background-color: #ff6b8b;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .btn-enviar:hover {
+      background-color: #ff4d73;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #ff6b8b;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 60px;
+    }
+
+    .footer-content p,
+    .footer-content h3 {
+      margin: 5px 0;
+    }
+
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      margin: 10px 8px 0;
+    }
+
+    /* Estilo do "pop-up" */
+.popup-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #ffe6ef;
+}
+
+.popup-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.popup-box h1 {
+  color: #ff6b8b;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho-site">
+    <div class="topo-site">
+      <h1>Quitutes By Josy</h1>
+    </div>
+    <nav class="menu-site">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cabeçalho do Cadastro -->
+  <!-- Container central tipo pop-up -->
+<section class="popup-cadastro">
+  <div class="popup-box">
+    <h1>Crie sua conta</h1>
+    <p>Faça parte do Quitutes By Josy e receba promoções exclusivas!</p>
+
+    <form class="form-cadastro" action="#" method="POST">
+      <div class="form-group">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="endereco">Endereço:</label>
+        <textarea id="endereco" name="endereco" rows="3" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmar-senha">Confirmar Senha:</label>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" required />
+      </div>
+
+      <button type="submit" class="btn-enviar">Cadastrar</button>
+    </form>
+  </div>
+</section>
+
+
+  
+
+  <!-- Rodapé -->
+  <footer id="contato">
+    <div class="footer-content">
+      <h3>Quitutes By Josy</h3>
+      <p>Rua Mamoré, 20 casa 1 - Vila Alto de Santo André</p>
+      <p>Telefone: (11) 98974-9657</p>
+      <p>Instagram: @quitutesbyjosy</p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/quitutesbyjosy" target="_blank">
+          <img src="imagens/ImgInstagram.png" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/5511989749657?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" target="_blank">
+          <img src="imagens/ImgWhats.png" alt="WhatsApp" />
+        </a>
+      </div>
+
+      <p>&copy; 2025 Quitutes By Josy. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

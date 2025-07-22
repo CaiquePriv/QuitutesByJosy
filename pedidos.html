@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedidos | Quitutes By Josy</title>
+
+  <style>
+    /* Cabeçalho com nome e menu */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff5f5;
+      color: #222;
+    }
+
+    header {
+      background-color: #ff6b8b;
+      color: white;
+    }
+
+    .cabecalho-site {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #222;
+    }
+
+    /* Seção Pedidos */
+    .pedidos {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 40px;
+      text-align: center;
+    }
+
+    .pedidos h2 {
+      margin-bottom: 25px;
+      font-size: 2rem;
+      color: #ff6b8b;
+    }
+
+    table.pedidos-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 8px rgb(255 107 139 / 0.3);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    table.pedidos-table th,
+    table.pedidos-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    table.pedidos-table th {
+      background-color: #ff6b8b;
+      color: white;
+      font-weight: 600;
+    }
+
+    table.pedidos-table tr:nth-child(even) {
+      background-color: #fff0f3;
+    }
+
+    table.pedidos-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .status-pendente {
+      color: #ff6b8b;
+      font-weight: bold;
+    }
+
+    .status-entregue {
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    /* Footer simples */
+    footer {
+      background-color: #ff8cab;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="cabecalho-site">
+      <div class="logo">Quitutes By Josy</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pedidos">
+    <h2>Meus Pedidos</h2>
+    <table class="pedidos-table">
+      <thead>
+        <tr>
+          <th>Nº Pedido</th>
+          <th>Data</th>
+          <th>Itens</th>
+          <th>Total</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#001</td>
+          <td>10/07/2025</td>
+          <td>Bolo de Chocolate, 6 Docinhos</td>
+          <td>R$ 85,00</td>
+          <td class="status-pendente">Em preparo</td>
+        </tr>
+        <tr>
+          <td>#002</td>
+          <td>05/07/2025</td>
+          <td>Torta de Morango</td>
+          <td>R$ 45,00</td>
+          <td class="status-entregue">Entregue</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2025 Quitutes By Josy - Todos os direitos reservados
+  </footer>
+</body>
+</html>
